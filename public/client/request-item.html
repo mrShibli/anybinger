@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anybring</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/index-2f719f37.css" />
+  </head>
+
+  <body class="bg-[#f5f5f5]">
+    <header>
+      <!-- Top Header -->
+      <div id="header" class="">
+        <div
+          class="bg-blue-dark h-8 w-full mx-auto flex flex-row gap-3 justify-end text-white items-center"
+        >
+          <div class="border-r-2 px-3 hidden lg:block">
+            <p class="text-sm">
+              Dhaka Delivery Charge ৳80 <span>|</span> Outside of Dhaka ৳130
+            </p>
+          </div>
+          <div class="border-r-2 px-3 flex text-sm">
+            <a class="mx-2 hidden lg:block" href="">TRACK YOUR ORDER</a>
+            <a class="mx-2 hidden lg:block" href="">DELIVERY POLICY</a>
+          </div>
+          <div class="mr-10 hidden lg:block" onclick="openSidebar()">
+            <i class="fa-brands fa-facebook text-white"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Nav Bar -->
+      <nav class="max-w-[1400px] sm:px-6 md:px-8 mx-auto relative">
+        <div
+          class="max-w-[80px] border border-t-transparent border-l-transparent border-r-transparent border-opacity-70 border-blue-dark sm:max-w-[150px] logo-sm sm:p-4 p-1 bg-white absolute top-[-20px] lg: rounded-full"
+        >
+          <img
+            class="w-full drop-shadow-2xl"
+            src="./images/Krisna-Chura-Logo.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="flex items-center h-14 sm:h-20 px-3 md:px-0 sm:px-0">
+          <button
+            class="block md:block sm:block lg:hidden border border-blue-dark px-2 rounded-full"
+          >
+            <span
+              class="text-white text-xl top-5 left-4 cursor-pointer"
+              onclick="openSidebar()"
+            >
+              <i class="bi bi-filter-left font-bold text-blue-dark"></i>
+            </span>
+          </button>
+          <div class="flex mx-auto items-center justify-between w-full">
+            <div></div>
+            <div></div>
+            <div class="lg:block hidden">
+              <div
+                class="flex justify-between search w-[450px] border-[1px] rounded-full h-10 border-blue-dark border-opacity-70"
+              >
+                <input
+                  class="border-none rounded-lg bg-transparent pl-4 align-middle text-[17px] w-[400px] outline-none"
+                  type="text"
+                />
+                <button
+                  class="bg-blue-dark rounded-full text-center w-[34px] h-[34px] m-[2px] drop-shadow-2xl"
+                >
+                  <i
+                    class="fa-solid fa-magnifying-glass text-white text-[16px] block"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <div class="icons flex gap-2">
+              <div
+                class="border rounded-full px-[8px] py-[4px] hidden lg:block"
+              >
+                <a href="">
+                  <i class="fa-regular fa-user text-[20px]"></i>
+                </a>
+              </div>
+              <div class="border rounded-full px-[5px] py-[4px] relative">
+                <a href="">
+                  <i class="fa-solid fa-shop text-[19px]"></i>
+                </a>
+                <div
+                  class="absolute flex-center bg-red-600 -top-3 -right-2 border w-[20px] rounded-full text-center"
+                >
+                  <span class="text-white font-bold text-[10px]">10</span>
+                </div>
+              </div>
+              <div
+                class="border rounded-full px-[8px] py-[4px] hidden lg:block"
+              >
+                <a href="">
+                  <i class="fa-solid fa-question text-[20px]"></i>
+                </a>
+              </div>
+              <div class="hidden lg:block">
+                <a
+                  href=""
+                  class="border flex-center rounded-full px-2.5 py-1 hover:border-blue-dark transition ease-in"
+                >
+                  <button class="">Become A Traveler</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="z-50 sidebar hidden lg:hidden fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900"
+      >
+        <div class="text-gray-100 text-xl">
+          <div class="p-2.5 mt-1 flex items-center">
+            <i class="fa-solid fa-gear px-2 py-1 rounded-md bg-blue-600"></i>
+            <h1 class="font-bold text-gray-200 text-[15px] ml-3">Anybringr</h1>
+            <i
+              class="bi bi-x cursor-pointer ml-28 lg:hidden"
+              onclick="openSidebar()"
+            ></i>
+          </div>
+          <div class="my-2 bg-gray-600 h-[1px]"></div>
+        </div>
+        <div
+          class="p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white"
+        >
+          <i class="bi bi-search text-sm"></i>
+          <input
+            type="text"
+            placeholder="Search"
+            class="text-[15px] ml-4 w-full bg-transparent focus:outline-none"
+          />
+        </div>
+
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="bi bi-house-door-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
+        </div>
+
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="bi bi-bookmark-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Cart</span>
+        </div>
+
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="fa-solid fa-user"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Account</span>
+        </div>
+
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="fa-solid fa-store"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Shop</span>
+        </div>
+
+        <div class="mt-2">
+          <a
+            href=""
+            class="border flex-center rounded-full px-2.5 py-1 !text-white transition ease-in"
+          >
+            <button class="">Become A Traveler</button>
+          </a>
+        </div>
+        <div class="my-4 bg-gray-600 h-[1px]"></div>
+        <!-- <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+                onclick="dropdown()">
+                <i class="bi bi-chat-left-text-fill"></i>
+                <div class="flex justify-between w-full items-center">
+                    <span class="text-[15px] ml-4 text-gray-200 font-bold">Chatbox</span>
+                    <span class="text-sm rotate-180" id="arrow">
+                        <i class="bi bi-chevron-down"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold" id="submenu">
+                <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+                    Social
+                </h1>
+                <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+                    Personal
+                </h1>
+                <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+                    Friends
+                </h1>
+            </div> -->
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Logout</span>
+        </div>
+      </div>
+
+      <div class="border border-x-0 hidden md:block">
+        <div
+          id="cat"
+          class="max-w-[1000px] sm:px-6 md:px-8 mx-auto flex justify-around h-10 items-center"
+        >
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Car
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a
+                  href=""
+                  class="link border-b pb-1 !text-[15px] hover:ml-2 transition ease-in-out"
+                  ><i class="fa-solid fa-angles-right mr-1"></i>Sub
+                  categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Car
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Bar
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              i
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              dfg
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              df
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Car
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              dfg
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              dfg
+            </h1>
+          </div>
+
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              dfg
+              <div
+                class="absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              dfg
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- main starts here -->
+    <br />
+
+    <main class="w-full max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8">
+      <div class="w-full md:w-[600px] mx-auto mt-5">
+        <h2 class="text-[28px] text-center font-medium text-gray-700 mb-4 mt-2">
+          Request for a product
+        </h2>
+        <div class="flex flex-col gap-4">
+          <form
+            action=""
+            class="w-[96%] sm:w-[90%] md:w-[400px] flex flex-col p-6 mx-auto mt-4 gap-2 border border-gray-200 shadow-md rounded-md bg-white"
+          >
+            <div class="w-full flex flex-col gap-2">
+              <label for="name" class="text-[15px] text-gray-800"
+                >Item link from US or UK based online stores</label
+              >
+              <input
+                type="url"
+                class="w-full text-sm px-2 py-[4px] border border-slate-400 outline-none focus:!border-slate-700 rounded-sm"
+                placeholder="Product link"
+                value=""
+                name="name"
+              />
+            </div>
+
+            <div class="flex flex-col justify-center items-center gap-4">
+              <div class="w-full flex flex-col gap-1">
+                <label for="name" class="text-[15px] text-gray-800"
+                  >Add a note</label
+                >
+
+                <textarea
+                  name=""
+                  id=""
+                  class="textarea h-[120px] !border-gray-400 focus:!border-slate-600"
+                  placeholder="Describe something about product or something else"
+                ></textarea>
+              </div>
+
+              <div class="w-full flex justify-between items-center">
+                <span class="text-[15px] font-medium text-gray-600"
+                  >Quantity</span
+                >
+
+                <div class="flex justify-between items-center">
+                  <button
+                    type="button"
+                    class="flex-center border border-orange-dark rounded-sm w-[22px] h-[22px]"
+                    id="decrementBtn"
+                  >
+                    <i class="fa-solid fa-minus text-[11px]"></i>
+                  </button>
+                  <button
+                    class="text-[13px] font-medium px-2"
+                    id="qtyValue"
+                    value="5"
+                    disabled
+                  >
+                    5
+                  </button>
+                  <button
+                    type="button"
+                    class="flex-center border border-orange-dark rounded-sm w-[22px] h-[22px]"
+                    id="incrementBtn"
+                  >
+                    <i class="fa-solid fa-plus text-[11px]"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-outline mt-2 !text-[13px]" type="submit">
+              Continue
+            </button>
+          </form>
+
+          <a
+            href=""
+            class="text-[14px] text-blue-dark hover:underline mx-auto mt-4"
+            >Learn how to request for a product</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8 mt-16 md:mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6">
+        <div class="flex flex-col">
+          <img
+            src="images/Krisna-Chura-Logo.png"
+            alt=""
+            class="w-[70px] mb-3"
+          />
+          <p class="text-small text-blue-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            asperiores veritatis maxime dolore illo minima alias vero ipsa,
+            dolorem ut?
+          </p>
+
+          <div class="mt-5">
+            <h3 class="text-[15px]">Follow Us On</h3>
+
+            <!-- <hr class="bg-green-500 h-[2px]"> -->
+
+            <div class="flex gap-2 mt-2">
+              <div
+                class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer"
+              >
+                <a href=""><i class="fa-brands fa-facebook-f text-blue"></i></a>
+              </div>
+              <div
+                class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer"
+              >
+                <a href=""><i class="fa-brands fa-youtube text-red-600"></i></a>
+              </div>
+              <div
+                class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer"
+              >
+                <a href=""
+                  ><i class="fa-brands fa-whatsapp text-green-600"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 col-span-2 flex-row gap-4 md:gap-6">
+          <div class="flex flex-col col-span-1">
+            <h3 class="text-[15px]">More Information</h3>
+            <hr class="h-[2px] bg-sky" />
+
+            <div class="flex flex-col gap-2 mt-3">
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >About us</a
+              >
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >Krisna Chura Shop</a
+              >
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >Latest Blogs</a
+              >
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >Contact us</a
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-col col-span-1">
+            <h3 class="text-[15px]">Customer Area</h3>
+            <hr class="h-[2px] bg-sky" />
+
+            <div class="flex flex-col gap-2 mt-3">
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >My account</a
+              >
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >Orders</a
+              >
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >Wishlist</a
+              >
+              <a href="" class="text-[14px] text-blue-dark hover:text-gray-700"
+                >Track Your Order</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div>
+            <h3 class="text-[15px]">Get In Touch</h3>
+            <hr class="bg-green-500 h-[2px]" />
+
+            <div class="flex items-center gap-3 mt-3">
+              <i class="fa-solid fa-square-phone text-2xl text-gray-700"></i>
+
+              <div class="flex flex-col">
+                <p class="text-small">Customer Support / Marketing Agent:</p>
+                <span class="text-small font-medium">+880 1798-833-942</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 mt-3">
+              <i class="fa-solid fa-envelope text-2xl text-gray-700"></i>
+
+              <div class="flex flex-col">
+                <p class="text-small">Official Email:</p>
+                <span class="text-small font-medium"
+                  >anybringrofficial@mail.com</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h3 class="text-[15px]">For Your Complain</h3>
+            <hr class="bg-green-500 h-[2px]" />
+
+            <div class="flex items-center gap-3 mt-3">
+              <i class="fa-solid fa-envelopes-bulk text-2xl text-gray-700"></i>
+
+              <div class="flex flex-col">
+                <p class="text-small">Office Time:</p>
+                <span class="text-small font-medium">10AM - 6PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="bg-blue-dark my-5 md:mt-8 md: mb-6" />
+
+      <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600"
+          >PRIVACY POLICY</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600"
+          >TERMS & CONDITIONS</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600"
+          >REFUND & RETURNS POLICY</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600"
+          >DELIVERY POLICY</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600"
+          >FAQS</a
+        >
+      </div>
+    </footer>
+
+    <div class="mx-auto mt-5 md:mt-7 bg-blue-dark">
+      <div
+        class="max-w-[1400px] mx-auto px-6 py-2 md:py-3 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-[14px] text-white text-center">
+          &copy; 2023 copyright by Anybringr | Designed & Developed by
+          <a href="" class="text-[13px] text-w-lws">DevUganda</a>
+        </p>
+
+        <img src="images/pay.png" alt="" class="h-6 md:h-7" />
+      </div>
+    </div>
+
+    <script>
+      const incrementBtn = document.getElementById("incrementBtn");
+      const decrementBtn = document.getElementById("decrementBtn");
+      const qtyValue = document.getElementById("qtyValue");
+
+      incrementBtn.addEventListener("click", function () {
+        if (qtyValue.value < 10) {
+          qtyValue.value = parseInt(qtyValue.value, 10) + 1;
+          qtyValue.innerText = qtyValue.value;
+        } else {
+          alert("can't order more than 10 item");
+        }
+      });
+
+      decrementBtn.addEventListener("click", function () {
+        if (qtyValue.value != 1) {
+          qtyValue.value = parseInt(qtyValue.value, 10) - 1;
+          qtyValue.innerText = qtyValue.value;
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
+      const catContainer = document.getElementById("cat");
+      const cahidCatContainer = document.getElementById("cahidCat");
+
+      catContainer.addEventListener("mouseover", () => {
+        // Show cahidCat children
+        cahidCatContainer.querySelectorAll(".cahidCat").forEach((child) => {
+          child.classList.remove("hidden");
+        });
+      });
+
+      catContainer.addEventListener("mouseout", () => {
+        // Hide cahidCat children
+        cahidCatContainer.querySelectorAll(".cahidCat").forEach((child) => {
+          child.classList.add("hidden");
+        });
+      });
+
+      function dropdown() {
+        document.querySelector("#submenu").classList.toggle("hidden");
+        document.querySelector("#arrow").classList.toggle("rotate-0");
+      }
+      // dropdown();
+
+      function openSidebar() {
+        document.querySelector(".sidebar").classList.toggle("hidden");
+      }
+    </script>
+
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.store("accordion", {
+          tab: 0,
+        });
+
+        Alpine.data("accordion", (idx) => ({
+          init() {
+            this.idx = idx;
+          },
+          idx: -1,
+          handleClick() {
+            this.$store.accordion.tab =
+              this.$store.accordion.tab === this.idx ? 0 : this.idx;
+          },
+          handleRotate() {
+            return this.$store.accordion.tab === this.idx ? "rotate-180" : "";
+          },
+          handleToggle() {
+            return this.$store.accordion.tab === this.idx
+              ? `max-height: ${this.$refs.tab.scrollHeight}px`
+              : "";
+          },
+        }));
+      });
+    </script>
+  </body>
+</html>

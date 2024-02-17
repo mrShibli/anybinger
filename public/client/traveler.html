@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anybring</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/index-2f719f37.css" />
+</head>
+
+<body class="bg-white">
+  <div class="py-1 fixed bottom-1 justify-around items-center text-[18px]  lg:hidden w-[98%] ml-[1%] rounded-2xl flex  bg-blue-dark  z-50">
+    <i class="fa-regular text-white fa-user "></i>
+    <div class="px-[5px] py-[4px] relative">
+      <a href="">
+        <i class="fa-solid text-white fa-shop"></i>
+      </a>
+      <div class="absolute flex-center bg-red-600 -top-1 -right-2 w-[15px] h-[15px] rounded-full text-center">
+        <span class="text-white font-bold text-[9px]">10</span>
+      </div>
+    </div>
+    <div class="px-[5px] py-[4px] relative">
+      <a href="">
+        <i class="fa-solid text-white fa-bell"></i>
+      </a>
+      <div class="absolute flex-center bg-red-600 -top-1 -right-2 w-[15px] h-[15px] rounded-full text-center">
+        <span class="text-white font-bold text-[9px]">10</span>
+      </div>
+    </div>
+  </div>
+  <header>
+    <!-- Top Header -->
+    <div id="header" class="">
+      <div class="bg-blue-dark h-8 w-full mx-auto flex flex-row gap-3 justify-end text-white items-center">
+        <div class="border-r-2 px-3 hidden lg:block">
+          <p class="text-sm">Dhaka Delivery Charge ৳80
+            <span>|</span>Outside of Dhaka ৳130</p>
+        </div>
+        <div class="border-r-2 px-3 flex text-sm">
+          <a class="mx-2 hidden lg:block" href="">TRACK YOUR ORDER</a>
+          <a class="mx-2 hidden lg:block" href="">DELIVERY POLICY</a>
+        </div>
+        <div class="mr-10 hidden lg:block" onclick="openSidebar()">
+          <i class="fa-brands fa-facebook text-white"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Nav Bar -->
+    <nav class="max-w-[1400px] sm:px-6 md:px-8 mx-auto relative">
+      <div class="max-w-[80px] border border-t-transparent border-l-transparent border-r-transparent border-opacity-70 border-blue-dark sm:max-w-[150px] logo-sm sm:p-4 p-1 bg-white absolute top-[-20px] lg: rounded-full">
+        <img class="w-full drop-shadow-2xl" src="./images/Krisna-Chura-Logo.png" alt="" srcset="" />
+      </div>
+      <div class="flex items-center h-14 sm:h-20 px-3 md:px-0 sm:px-0">
+        <button class="block md:block sm:block lg:hidden border border-blue-dark px-2 rounded-full">
+          <span class="text-white text-xl top-5 left-4 cursor-pointer" onclick="openSidebar()">
+            <i class="bi bi-filter-left font-bold text-blue-dark"></i>
+          </span>
+        </button>
+        <div class="flex mx-auto items-center justify-between w-full">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div class="lg:block hidden">
+            <div class="flex justify-between search w-[450px] border-[1px] rounded-full h-10 border-blue-dark border-opacity-70">
+              <input class="border-none rounded-lg bg-transparent pl-4 align-middle text-[17px] w-[400px] outline-none" type="text" />
+              <button class="bg-blue-dark rounded-full text-center w-[34px] h-[34px] m-[2px] drop-shadow-2xl">
+                <i class="fa-solid fa-magnifying-glass text-white text-[16px] block"></i>
+              </button>
+            </div>
+          </div>
+          <div class="icons flex gap-2">
+            <div class="px-[8px] py-[4px] hidden lg:block bg-white">
+              <a href="">
+                <i class="fa-regular fa-user text-[15px]"></i>
+              </a>
+            </div>
+            <div class="px-[5px] py-[4px] hidden lg:block relative bg-white">
+              <a href="">
+                <i class="fa-solid fa-shop text-[13px]"></i>
+              </a>
+              <div class="absolute flex-center bg-red-600 -top-1 -right-2 w-[15px] h-[15px] rounded-full text-center">
+                <span class="text-white font-bold text-[9px]">10</span>
+              </div>
+            </div>
+            <div class="px-[8px] py-[4px] hidden lg:block bg-white">
+              <a href="">
+                <i class="fa-solid fa-question text-[15px]"></i>
+              </a>
+            </div>
+            <div class="-mr-2 ld:mr-0 w-[100px] sm:w-auto bg-white">
+              <a href="" class="border flex-center rounded-full px-2.5 py-1 hover:border-blue-dark transition ease-in">
+                <button class="text-[11px]  sm:text-[12px]">Become A Traveler</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="z-50 sidebar hidden lg:hidden fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900">
+      <div class="text-gray-100 text-xl">
+        <div class="p-2.5 mt-1 flex items-center">
+          <i class="fa-solid fa-gear px-2 py-1 rounded-md bg-blue-600"></i>
+          <h1 class="font-bold text-gray-200 text-[15px] ml-3">Anybringr</h1>
+          <i class="bi bi-x cursor-pointer ml-28 lg:hidden" onclick="openSidebar()"></i>
+        </div>
+        <div class="my-2 bg-gray-600 h-[1px]">
+        </div>
+      </div>
+      <div class="p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white">
+        <i class="bi bi-search text-sm"></i>
+        <input type="text" placeholder="Search" class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" />
+      </div>
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <i class="bi bi-house-door-fill"></i>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
+      </div>
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <i class="bi bi-bookmark-fill"></i>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">Cart</span>
+      </div>
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <i class="fa-solid fa-user"></i>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">Account</span>
+      </div>
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <i class="fa-solid fa-store"></i>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">Shop</span>
+      </div>
+      <div class="mt-2">
+        <a href="" class="border flex-center rounded-full px-2.5 py-1 !text-white transition ease-in">
+          <button class="">Become A Traveler</button>
+        </a>
+      </div>
+      <div class="my-4 bg-gray-600 h-[1px]">
+      </div>
+      <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <i class="bi bi-box-arrow-in-right"></i>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">Logout</span>
+      </div>
+    </div>
+    <div class="border border-x-0 hidden lg:block bg-white">
+      <div id="cat" class="sm:w-[80%] md:max-w-[60%] sm:px-6 md:px-8 mx-auto flex justify-around h-10 items-center">
+        <div class="group text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class=" relative">Car
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px] hover:ml-2 transition ease-in-out">
+                <i class="fa-solid fa-angles-right mr-1"></i>Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>
+          </h1>
+        </div>
+        <div class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class="group relative">Car
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>
+          </h1>
+        </div>
+        <div class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class="group relative">Bar
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>i</h1>
+        </div>
+        <div class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class="group relative">dfg
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>df</h1>
+        </div>
+        <div class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class="group relative">Car
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>
+          </h1>
+        </div>
+        <div class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class="group relative">dfg
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>dfg</h1>
+        </div>
+        <div class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion">
+          <h1 class="group relative">dfg
+            <div class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]">
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+              <a href="" class="link border-b pb-1 !text-[15px]">Sub categoires</a>
+            </div>dfg</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- main starts here -->
+    
+    <main class="w-full max-w-[1400px] mx-auto px-3 mt-3 sm:px-6 md:px-8">
+        <div class="flex justify-between items-end md:items-start  lg:overflow-hidden relative h-auto lg:h-[85vh] xl:max-h-[600px] mb-[450px] sm:mb-[300px] md:mb-[200px] lg:mb-10">
+            <img src="images/best-travel-backpacks-blog-900x600.jpg" alt="" class="w-full h-auto rounded-md">
+            
+            <div class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-50 rounded-md"></div>
+
+            <div class="absolute top-0 left-0 bottom-0 right-0 flex  flex-col lg:flex-row items-center justify-around opacity-100">
+                <div class="w-full flex flex-col items-center lg:items-start gap-1 absolute top-6 lg:left-8 lg:relative">
+                    <h2 class="text-2xl font-bold md:text-3xl lg:text-4xl text-white text-shadow text-center lg:text-left">Make Money Every <br>Time You Travel With Backpack</h2>
+                    <p class="text-[16px] md:!text-xl text-gray-200 text-center lg:text-left">Carry products for others in your extra <br>luggage space to make money while traveling.</p>
+
+                    <!-- <button class="w-[150px] py-2 bg-green-600 rounded-md text-white mt-4 hover:bg-green-700 focus:ring-2 ring-green-200">Watch video |> </button> -->
+                </div>
+
+                <div class="flex flex-col gap-2 px-6 py-4 bg-white border rounded-md w-[100%] xs:w-[380px] absolute top-[220px] justify-end lg:relative lg:top-0 lg:right-8">
+                    <h2 class="text-[22px] font-medium">How you will earn</h2>
+
+                    <div class="flex flex-col gap-1">
+                        <label for="" class="label !text-[16px]">Where are you from</label>
+                        <select name="" id="" class="select !py-2 rounded-md">
+                            <option value="" class="py-2">Bangladesh</option>
+                            <option value="" class="py-2">Russia</option>
+                            <option value="" class="py-2">Turkey</option>
+                            <option value="" class="py-2">Ireland</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex flex-col gap-1">
+                        <label for="" class="label !text-[16px]">How much luggage space do you have?</label>
+                        <select name="" id="" class="select !py-2 rounded-md">
+                            <option value="" class="py-2">One luggage</option>
+                            <option value="" class="py-2">Two luggages</option>
+                            <option value="" class="py-2">Three luggages</option>
+                            <option value="" class="py-2">More than three luggages</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <label for="" class="label !text-[16px]">Approx</label>
+                        <h2 class="text-3xl font-bold">$75 - $125*</h2>
+
+                        <p class="text-[14px] font-medium">You will earn 75 - 125 dollers for carring these bags</p>
+                    </div>
+
+                    <button class="w-[150px] py-2 bg-orange-dark rounded-md text-white mt-4 hover:bg-orange-600 focus:ring ring-orange-400">Get Started Now</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="w-full flex flex-col items-center justify-center">
+            <h1 class="text-4xl font-medium text-center">How it works?</h1>
+
+            <div class="w-[100%] md:w-[70%] lg:w-[60%] mx-auto mt-6">
+                <h2 class="my-2 text-[22px] font-medium text-slate-800 text-center">Learn in 15 minutes how to earn money through travel with anybringr</h2>
+                <div class="w-full md:w-full h-[300px] sm:h-[320px] md:h-[320px] lg:h-[440px] rounded-md mx-auto mb-14 lg:mb-0 ">
+                    
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/C48h_sfP7WA?si=DU47_dXHh4xnYR9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            </div>
+        </div>
+
+        <div class="mt-16 w-full mx-auto px-3 sm:px-6 md:px-8">
+
+        <h1 class="text-4xl font-medium text-center ,!mb-5">Customer satisfaction</h1>
+        <br>
+        <div class="swiper !h-[300px] ">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                   <div class="w-[300px] sm:w-[400px] md:w-[550px] lg:w-[650px]  mx-auto mt-8">
+                    <p class="text-sm"><i class="fa-solid fa-quote-left text-3xl text-gray-700 mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima perspiciatis at veritatis reprehenderit quod necessitatibus obcaecati, accusamus iste doloribus, saepe pariatur temporibus dolore cupiditate id nisi, officia repellendus hic voluptates sed ut adipisci quae praesentium incidunt! Rem delectus fugit officiis nesciunt vero magni excepturi, id sapiente tenetur. Provident, qui iusto!</p> 
+
+                   <h2 class="text-[18px] font-bold text-gray-800 mt-4">Md Shibli Raihan</h2>
+                   <h4 class="text-[15px]">Founder of SneezIt</h4>
+                   </div>
+                </div>
+                <div class="swiper-slide">
+                   <div class="w-[300px] sm:w-[400px] md:w-[550px] lg:w-[650px]  mx-auto mt-8">
+                    <p class="text-sm"><i class="fa-solid fa-quote-left text-3xl text-gray-700 mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima perspiciatis at veritatis reprehenderit quod necessitatibus obcaecati, accusamus iste doloribus, saepe pariatur temporibus dolore cupiditate id nisi, officia repellendus hic voluptates sed ut adipisci quae praesentium incidunt! Rem delectus fugit officiis nesciunt vero magni excepturi, id sapiente tenetur. Provident, qui iusto!</p> 
+
+                   <h2 class="text-[18px] font-bold text-gray-800 mt-4">Himel Hasan</h2>
+                   <h4 class="text-[15px]">Founder of Nasa</h4>
+                   </div>
+                </div>
+                <div class="swiper-slide">
+                   <div class="w-[300px] sm:w-[400px] md:w-[550px] lg:w-[650px]  mx-auto mt-8">
+                    <p class="text-sm"><i class="fa-solid fa-quote-left text-3xl text-gray-700 mr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima perspiciatis at veritatis reprehenderit quod necessitatibus obcaecati, accusamus iste doloribus, saepe pariatur temporibus dolore cupiditate id nisi, officia repellendus hic voluptates sed ut adipisci quae praesentium incidunt! Rem delectus fugit officiis nesciunt vero magni excepturi, id sapiente tenetur. Provident, qui iusto!</p> 
+
+                   <h2 class="text-[18px] font-bold text-gray-800 mt-4">Tamin Islam</h2>
+                   <h4 class="text-[15px]">Founder of Scammer</h4>
+                   </div>
+                </div>
+                </div>
+                
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+        </div>
+
+        </div>
+
+
+            <!-- frequently asked questions -->
+    <div
+      class="flex justify-center items-start mt-14 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8"
+    >
+      <div class="w-full mx-2 sm:mx-0 sm:w-10/12 md:w-3/5 my-1">
+        <h2 class="text-2xl text-center font-semibold text-vnet-blue mb-2">
+          Frequently Asked Questions
+        </h2>
+        <ul class="flex flex-col">
+          <li class="bg-white my-2" x-data="accordion(1)">
+            <h2
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+            >
+              <span>When will my order arrive?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-orange-dark h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h2>
+            <div
+              x-ref="tab"
+              :style="handleToggle()"
+              class="border-l-2 border-orange-dark overflow-hidden max-h-0 duration-500 transition-all"
+            >
+              <p class="p-3 text-gray-900">
+                Shipping time is set by our delivery partners, according to the
+                delivery method chosen by you. Additional details can be found
+                in the order confirmation
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2" x-data="accordion(2)">
+            <h2
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+            >
+              <span>How do I track my order?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-orange-dark h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h2>
+            <div
+              class="border-l-2 border-orange-dark overflow-hidden max-h-0 duration-500 transition-all"
+              x-ref="tab"
+              :style="handleToggle()"
+            >
+              <p class="p-3 text-gray-900">
+                Once shipped, you’ll get a confirmation email that includes a
+                tracking number and additional information regarding tracking
+                your order.
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2" x-data="accordion(3)">
+            <h2
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+            >
+              <span>What’s your return policy?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-orange-dark h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h2>
+            <div
+              class="border-l-2 border-orange-dark overflow-hidden max-h-0 duration-500 transition-all"
+              x-ref="tab"
+              :style="handleToggle()"
+            >
+              <p class="p-3 text-gray-900">
+                We allow the return of all items within 30 days of your original
+                order’s date. If you’re interested in returning your items, send
+                us an email with your order number and we’ll ship a return
+                label.
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2" x-data="accordion(4)">
+            <h2
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+            >
+              <span>How do I make changes to an existing order?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-orange-dark h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h2>
+            <div
+              class="border-l-2 border-orange-dark overflow-hidden max-h-0 duration-500 transition-all"
+              x-ref="tab"
+              :style="handleToggle()"
+            >
+              <p class="p-3 text-gray-900">
+                Changes to an existing order can be made as long as the order is
+                still in “processing” status. Please contact our team via email
+                and we’ll make sure to apply the needed changes. If your order
+                has already been shipped, we cannot apply any changes to it. If
+                you are unhappy with your order when it arrives, please contact
+                us for any changes you may require.
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2" x-data="accordion(5)">
+            <h2
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+            >
+              <span>What shipping options do you have?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-orange-dark h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h2>
+            <div
+              class="border-l-2 border-orange-dark overflow-hidden max-h-0 duration-500 transition-all"
+              x-ref="tab"
+              :style="handleToggle()"
+            >
+              <p class="p-3 text-gray-900">
+                For USA domestic orders we offer FedEx and USPS shipping.
+              </p>
+            </div>
+          </li>
+          <li class="bg-white my-2" x-data="accordion(6)">
+            <h2
+              @click="handleClick()"
+              class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+            >
+              <span>What payment methods do you accept?</span>
+              <svg
+                :class="handleRotate()"
+                class="fill-current text-orange-dark h-6 w-6 transform transition-transform duration-500"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                ></path>
+              </svg>
+            </h2>
+            <div
+              class="border-l-2 border-orange-dark overflow-hidden max-h-0 duration-500 transition-all"
+              x-ref="tab"
+              :style="handleToggle()"
+            >
+              <p class="p-3 text-gray-900">
+                Any method of payments acceptable by you. For example: We accept
+                MasterCard, Visa, American Express, PayPal, JCB Discover, Gift
+                Cards, etc.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </main>
+
+
+  <footer class="mt-16 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6">
+      <div class="flex flex-col">
+        <img src="images/Krisna-Chura-Logo.png" alt="" class="w-[70px] mb-3" />
+        <p class="text-small text-blue-dark bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque asperiores veritatis maxime dolore illo minima alias vero ipsa, dolorem ut?</p>
+        <div class="mt-5">
+          <h3 class="text-[15px] bg-white">Follow Us On</h3>
+          <div class="flex gap-2 mt-2">
+            <div class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer">
+              <a href="">
+                <i class="fa-brands fa-facebook-f text-blue"></i>
+              </a>
+            </div>
+            <div class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer">
+              <a href="">
+                <i class="fa-brands fa-youtube text-red-600"></i>
+              </a>
+            </div>
+            <div class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer">
+              <a href="">
+                <i class="fa-brands fa-whatsapp text-green-600"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 col-span-2 flex-row gap-4 md:gap-6">
+        <div class="flex flex-col col-span-1">
+          <h3 class="text-[15px] bg-white">More Information</h3>
+          <hr class="h-[2px] bg-blue-dark" />
+          <div class="flex flex-col gap-2 mt-3">
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">About us</a>
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">Krisna Chura Shop</a>
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">Latest Blogs</a>
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">Contact us</a>
+          </div>
+        </div>
+        <div class="flex flex-col col-span-1">
+          <h3 class="text-[15px] bg-white">Customer Area</h3>
+          <hr class="h-[2px] bg-blue-dark" />
+          <div class="flex flex-col gap-2 mt-3">
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">My account</a>
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">Orders</a>
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">Wishlist</a>
+            <a href="" class="text-[14px] text-blue-dark hover:text-gray-700 bg-white">Track Your Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div>
+          <h3 class="text-[15px] bg-white">Get In Touch</h3>
+          <hr class="bg-blue-dark h-[2px]" />
+          <div class="flex items-center gap-3 mt-3">
+            <i class="fa-solid fa-square-phone text-2xl text-gray-700"></i>
+            <div class="flex flex-col">
+              <p class="text-small bg-white">Customer Support / Marketing Agent:</p>
+              <span class="text-small font-medium bg-white">+880 1798-833-942</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 mt-3">
+            <i class="fa-solid fa-envelope text-2xl text-gray-700"></i>
+            <div class="flex flex-col">
+              <p class="text-small bg-white">Official Email:</p>
+              <span class="text-small font-medium">anybringrofficial@mail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6">
+          <h3 class="text-[15px] bg-white">For Your Complain</h3>
+          <hr class="bg-blue-dark h-[2px]" />
+          <div class="flex items-center gap-3 mt-3">
+            <i class="fa-solid fa-envelopes-bulk text-2xl text-gray-700"></i>
+            <div class="flex flex-col">
+              <p class="text-small bg-white">Office Time:</p>
+              <span class="text-small font-medium bg-white">10AM - 6PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="bg-blue-dark my-5 md:mt-8 md: mb-6" />
+    <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+      <a href="" class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white">PRIVACY POLICY</a>
+      <a href="" class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white">TERMS & CONDITIONS</a>
+      <a href="" class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white">REFUND & RETURNS POLICY</a>
+      <a href="" class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white">DELIVERY POLICY</a>
+      <a href="" class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white">FAQS</a>
+    </div>
+  </footer>
+  <div class="mx-auto mt-5 md:mt-7 bg-blue-dark">
+    <div class="max-w-[1400px] mx-auto px-6 py-2 md:py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[14px] text-white text-center">&copy; 2023 copyright by Anybringr | Designed & Developed by
+        <a href="" class="text-[13px] text-w-lws">DevArtisan</a>
+      </p>
+      <img src="images/pay.png" alt="" class="h-6 md:h-7" />
+    </div>
+  </div>
+  <script type="text/javascript">
+  //   const catContainer = document.getElementById("cat");
+    //   const cahidCatContainer = document.getElementById("cahidCat");
+
+    //   catContainer.addEventListener("mouseover", () => {
+    //     // Show cahidCat children
+    //     cahidCatContainer.querySelectorAll(".cahidCat").forEach((child) => {
+    //       child.classList.remove("hidden");
+    //     });
+    //   });
+
+    //   catContainer.addEventListener("mouseout", () => {
+    //     // Hide cahidCat children
+    //     cahidCatContainer.querySelectorAll(".cahidCat").forEach((child) => {
+    //       child.classList.add("hidden");
+    //     });
+    //   });
+
+    //   function dropdown() {
+    //     document.querySelector("#submenu").classList.toggle("hidden");
+    //     document.querySelector("#arrow").classList.toggle("rotate-0");
+    //   }
+    //   dropdown();
+
+    function openSidebar() {
+      document.querySelector(".sidebar").classList.toggle("hidden");
+    }
+  </script>
+  <script>
+  document.addEventListener("alpine:init", () => {
+      Alpine.store("accordion", {
+        tab: 0,
+      });
+
+      Alpine.data("accordion", (idx) => ({
+        init() {
+          this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+          this.$store.accordion.tab =
+            this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+          return this.$store.accordion.tab === this.idx ? "rotate-180" : "";
+        },
+        handleToggle() {
+          return this.$store.accordion.tab === this.idx
+            ? `max-height: ${this.$refs.tab.scrollHeight}px`
+            : "";
+        },
+      }));
+    });
+  </script>
+</body>
+</html>

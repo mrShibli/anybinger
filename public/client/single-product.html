@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anybring</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/index-2f719f37.css" />
+  </head>
+  <body class="bg-[#f5f5f5]">
+    <div
+      class="py-1 fixed bottom-1 justify-around items-center text-[18px] lg:hidden w-[98%] ml-[1%] rounded-2xl flex bg-blue-dark z-50"
+    >
+      <i class="fa-regular text-white fa-user"></i>
+      <div class="px-[5px] py-[4px] relative">
+        <a href="">
+          <i class="fa-solid text-white fa-shop"></i>
+        </a>
+        <div
+          class="absolute flex-center bg-red-600 -top-1 -right-2 w-[15px] h-[15px] rounded-full text-center"
+        >
+          <span class="text-white font-bold text-[9px]">10</span>
+        </div>
+      </div>
+      <div class="px-[5px] py-[4px] relative">
+        <a href="">
+          <i class="fa-solid text-white fa-bell"></i>
+        </a>
+        <div
+          class="absolute flex-center bg-red-600 -top-1 -right-2 w-[15px] h-[15px] rounded-full text-center"
+        >
+          <span class="text-white font-bold text-[9px]">10</span>
+        </div>
+      </div>
+    </div>
+    <header>
+      <!-- Top Header -->
+      <div id="header" class="">
+        <div
+          class="bg-blue-dark h-8 w-full mx-auto flex flex-row gap-3 justify-end text-white items-center"
+        >
+          <div class="border-r-2 px-3 hidden lg:block">
+            <p class="text-sm">
+              Dhaka Delivery Charge ৳80 <span>|</span>Outside of Dhaka ৳130
+            </p>
+          </div>
+          <div class="border-r-2 px-3 flex text-sm">
+            <a class="mx-2 hidden lg:block" href="">TRACK YOUR ORDER</a>
+            <a class="mx-2 hidden lg:block" href="">DELIVERY POLICY</a>
+          </div>
+          <div class="mr-10 hidden lg:block" onclick="openSidebar()">
+            <i class="fa-brands fa-facebook text-white"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Nav Bar -->
+      <nav class="max-w-[1400px] sm:px-6 md:px-8 mx-auto relative">
+        <div
+          class="max-w-[80px] border border-t-transparent border-l-transparent border-r-transparent border-opacity-70 border-blue-dark sm:max-w-[150px] logo-sm sm:p-4 p-1 bg-white absolute top-[-20px] lg: rounded-full"
+        >
+          <img
+            class="w-full drop-shadow-2xl"
+            src="./images/Krisna-Chura-Logo.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="flex items-center h-14 sm:h-20 px-3 md:px-0 sm:px-0">
+          <button
+            class="block md:block sm:block lg:hidden border border-blue-dark px-2 rounded-full"
+          >
+            <span
+              class="text-white text-xl top-5 left-4 cursor-pointer"
+              onclick="openSidebar()"
+            >
+              <i class="bi bi-filter-left font-bold text-blue-dark"></i>
+            </span>
+          </button>
+          <div class="flex mx-auto items-center justify-between w-full">
+            <div></div>
+            <div></div>
+            <div class="lg:block hidden">
+              <div
+                class="flex justify-between search w-[450px] border-[1px] rounded-full h-10 border-blue-dark border-opacity-70"
+              >
+                <input
+                  class="border-none rounded-lg bg-transparent pl-4 align-middle text-[17px] w-[400px] outline-none"
+                  type="text"
+                />
+                <button
+                  class="bg-blue-dark rounded-full text-center w-[34px] h-[34px] m-[2px] drop-shadow-2xl"
+                >
+                  <i
+                    class="fa-solid fa-magnifying-glass text-white text-[16px] block"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <div class="icons flex gap-2">
+              <div class="px-[8px] py-[4px] hidden lg:block bg-white">
+                <a href="">
+                  <i class="fa-regular fa-user text-[15px]"></i>
+                </a>
+              </div>
+              <div class="px-[5px] py-[4px] hidden lg:block relative bg-white">
+                <a href="">
+                  <i class="fa-solid fa-shop text-[13px]"></i>
+                </a>
+                <div
+                  class="absolute flex-center bg-red-600 -top-1 -right-2 w-[15px] h-[15px] rounded-full text-center"
+                >
+                  <span class="text-white font-bold text-[9px]">10</span>
+                </div>
+              </div>
+              <div class="px-[8px] py-[4px] hidden lg:block bg-white">
+                <a href="">
+                  <i class="fa-solid fa-question text-[15px]"></i>
+                </a>
+              </div>
+              <div class="-mr-2 ld:mr-0 w-[100px] sm:w-auto bg-white">
+                <a
+                  href=""
+                  class="border flex-center rounded-full px-2.5 py-1 hover:border-blue-dark transition ease-in"
+                >
+                  <button class="text-[11px] sm:text-[12px]">
+                    Become A Traveler
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="z-50 sidebar hidden lg:hidden fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900"
+      >
+        <div class="text-gray-100 text-xl">
+          <div class="p-2.5 mt-1 flex items-center">
+            <i class="fa-solid fa-gear px-2 py-1 rounded-md bg-blue-600"></i>
+            <h1 class="font-bold text-gray-200 text-[15px] ml-3">Anybringr</h1>
+            <i
+              class="bi bi-x cursor-pointer ml-28 lg:hidden"
+              onclick="openSidebar()"
+            ></i>
+          </div>
+          <div class="my-2 bg-gray-600 h-[1px]"></div>
+        </div>
+        <div
+          class="p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white"
+        >
+          <i class="bi bi-search text-sm"></i>
+          <input
+            type="text"
+            placeholder="Search"
+            class="text-[15px] ml-4 w-full bg-transparent focus:outline-none"
+          />
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="bi bi-house-door-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Home</span>
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="bi bi-bookmark-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Cart</span>
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="fa-solid fa-user"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Account</span>
+        </div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="fa-solid fa-store"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Shop</span>
+        </div>
+        <div class="mt-2">
+          <a
+            href=""
+            class="border flex-center rounded-full px-2.5 py-1 !text-white transition ease-in"
+          >
+            <button class="">Become A Traveler</button>
+          </a>
+        </div>
+        <div class="my-4 bg-gray-600 h-[1px]"></div>
+        <div
+          class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        >
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span class="text-[15px] ml-4 text-gray-200 font-bold">Logout</span>
+        </div>
+      </div>
+      <div class="border border-x-0 hidden lg:block bg-white">
+        <div
+          id="cat"
+          class="sm:w-[80%] md:max-w-[60%] sm:px-6 md:px-8 mx-auto flex justify-around h-10 items-center"
+        >
+          <div
+            class="group text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="relative">
+              Car
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a
+                  href=""
+                  class="link border-b pb-1 !text-[15px] hover:ml-2 transition ease-in-out"
+                >
+                  <i class="fa-solid fa-angles-right mr-1"></i>Sub categoires
+                </a>
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Car
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Bar
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              i
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              dfg
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              df
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              Car
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              dfg
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              dfg
+            </h1>
+          </div>
+          <div
+            class="text-gray-500 uppercase border-b border-white hover:border-b hover:border-blue-dark cursor-pointer transextion"
+          >
+            <h1 class="group relative">
+              dfg
+              <div
+                class="z-10 absolute top-[18px] mt-2 w-[200px] hidden group-hover:flex flex-col gap-[6px] border px-3 py-2 bg-w-lws shadow-md rounded-[4px]"
+              >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+                <a href="" class="link border-b pb-1 !text-[15px]"
+                  >Sub categoires</a
+                >
+              </div>
+              dfg
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main class="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8">
+      <div class="bg-white inline-block">
+        <div class="flex flex-row items-center justify-between">
+          <a href="" class="link">Home</a>
+          <i
+            class="fa-solid fa-chevron-right text-[12px] mx-1 text-gray-700"
+          ></i>
+          <a href="" class="link">Products</a>
+        </div>
+      </div>
+      <div
+        id="fullscreenModal"
+        class="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-70 z-20 hidden"
+      >
+        <div
+          class="flex items-center justify-center h-screen overflow-x-scroll mx-auto my-6"
+        >
+          <div class="max-w-full max-h-full">
+            <i
+              class="fa-solid fa-xmark absolute top-6 right-6 sm:top-8 sm:right-10 w-[30px] sm:w-[40px] h-[30px] sm:h-[40px] text-sm md:text-xl bg-blue-dark hover:bg-gray-700 flex-center rounded-full text-white cursor-pointer"
+              id="hideModalImage"
+            ></i>
+            <img
+              id="modalImage"
+              alt="Modal Image"
+              class="!-mt-10 w-full h-[70vh] sm:h-[90vh] mx-auto max-h-fit"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid items-center grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-4"
+      >
+        <div class="flex flex-row items-center">
+          <div class="flex flex-col gap-2 sm:gap-3 mt-3" id="productAllImages">
+            <div
+              class="flex justify-center items-center p-1 bg-w-lws border w-[40px] xs:w-[70px] xl:w-[90] lg:w-[70px] md:w-[50px] sm:w-[70px]"
+            >
+              <img
+                src="images/650.png"
+                alt=""
+                class="w-full h-full"
+                id="SiblingImages"
+              />
+            </div>
+            <div
+              class="flex justify-center items-center p-1 bg-w-lws border w-[40px] xs:w-[70px] xl:w-[90] lg:w-[70px] md:w-[50px] sm:w-[70px]"
+            >
+              <img
+                src="images/640.png"
+                alt=""
+                class="w-full h-full"
+                id="SiblingImages"
+              />
+            </div>
+            <div
+              class="flex justify-center items-center p-1 bg-w-lws border w-[40px] xs:w-[70px] xl:w-[90] lg:w-[70px] md:w-[50px] sm:w-[70px]"
+            >
+              <img
+                src="images/640.png"
+                alt=""
+                class="w-full h-full"
+                id="SiblingImages"
+              />
+            </div>
+            <div
+              class="flex justify-center items-center p-1 bg-w-lws border w-[40px] xs:w-[70px] xl:w-[90] lg:w-[70px] md:w-[50px] sm:w-[70px]"
+            >
+              <img
+                src="images/640.png"
+                alt=""
+                class="w-full h-full"
+                id="SiblingImages"
+              />
+            </div>
+          </div>
+          <div
+            class="border-gray-300 flex justify-center items-center p-2 h-full w-full lg:h-full md:h-[350px]"
+          >
+            <img
+              src="images/640.png"
+              alt=""
+              class="rounded-lg hover:cursor-pointer w-full h-full"
+              id="mainImage"
+              onclick="openModal(this)"
+            />
+          </div>
+        </div>
+        <div class="grid col-span-1 flex-col justify-center xs:justify-start">
+          <div class="mb-4 px-3 sm:px-0">
+            <div class="flex flex-col gap-2">
+              <h1
+                class="text-[25px] md:text-[18px] lg:text-[25px] text-blue-dark font-medium text-start xs:text-left"
+              >
+                New Digital Fan
+              </h1>
+              <div class="flex items-center">
+                <span class="text-[14px] md:text-[12px] lg:text-[14px]"
+                  >Category :
+                </span>
+                <h1 class="md:text-[15px] lg:text-[20px]">Hololo</h1>
+              </div>
+              <div class="flex items-center gap-2">
+                <p class="flex items-center">
+                  <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                  <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                  <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                  <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                  <i class="fa-solid fa-star text-[13px] text-gray-500"></i>
+                  <span class="ml-2 bg-white text-[13px]">(1 review)</span>
+                </p>
+              </div>
+              <p
+                class="text-md sm:text-small bg-white md:w-full lg:w-[80%] text-left"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                voluptatum enim dignissimos culpa, facilis aut eveniet veniam
+                atque officiis placeat in dicta inventore excepturi ipsam eaque,
+                minima itaque similique quis sed maxime ad? Eius saepe excepturi
+                facilis ab explicabo cum eveniet est minus dolores!
+              </p>
+            </div>
+            <div
+              class="flex justify-center xs:justify-start mt-4 md:mt-1 lg:mt-4 items-center gap-2"
+            >
+              <p
+                class="text-[13px] line-through text-dark bg-white inline-block"
+              >
+                &#2547;500.00
+              </p>
+              <span
+                class="inline-block md:text-[15px] lg:text-[20px] text-[20px] font-extrabold bg-gradient-to-r from-red-500 to-red-800 text-transparent bg-clip-text"
+                >&#2547;380.00</span
+              >
+            </div>
+            <div
+              class="bg-white flex items-center gap-3 my-3 md:mt-1 lg:mt-5 xs:justify-start"
+            >
+              <span class="text-sm">Size:</span>
+              <div
+                class="flex items-center justify-center w-[33px] h-[33px] rounded-full border hover:bg-blue-dark hover:border-blue-dark group cursor-pointer transition"
+              >
+                <p class="text-small cursor-pointer group-hover:text-white">
+                  30
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-center w-[33px] h-[33px] rounded-full border hover:bg-blue-dark hover:border-blue-dark group cursor-pointer"
+              >
+                <p class="text-small cursor-pointer group-hover:text-white">
+                  32
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-center w-[33px] h-[33px] rounded-full border hover:bg-blue-dark hover:border-blue-dark group cursor-pointer"
+              >
+                <p class="text-small cursor-pointer group-hover:text-white">
+                  34
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex sm:flex-row flex-col items-center justify-center xs:justify-start gap-2 md:mt-1 lg:mt-4 sm:mt-6"
+            >
+              <div
+                class="absolute sm:static -top-12 -right-[5px] xs:right-1 sm:right-[1%] z-10 md:w-[100px] w-[40%] sm:w-[100px] flex items-center justify-around h-[30px] bg-white border border-gray-300 rounded-2xl sm:rounded-[3px] px-[2px] mt-[1px]"
+              >
+                <button class="sm:p-2 p-0 mb-[2px]">
+                  <i class="fa-solid fa-minus text-[12px]"></i>
+                </button>
+                <span class="text-small">2</span>
+                <button class="sm:p-2 p-0 mb-[2px]">
+                  <i class="fa-solid fa-plus text-[12px]"></i>
+                </button>
+              </div>
+              <button
+                class="btn-cart !hidden sm:!block w-[40%] sm:w-auto lg:text-[14px] md:text-[11px] !rounded-sm"
+              >
+                Add To Cart
+              </button>
+              <button
+                class="btn-cart !hidden sm:!block w-[40%] sm:w-auto lg:text-[14px] md:text-[11px] !rounded-sm"
+              >
+                Add To Wishlist
+              </button>
+              <div
+                class="sm:!hidden sm:w-[30%] justify-between items-center px-4 mx-auto bg-white gap-2 visible border rounded-[20px] flex"
+              >
+                <button>
+                  <i
+                    class="!text-[22px] sm:!text-[30px] py-2 text-center fa-solid fa-cart-shopping icons text-slate-600 hover:text-gray-500 transition"
+                  ></i>
+                </button>
+                <button>
+                  <i
+                    class="!text-[22px] sm:!text-[30px] py-2 text-center fa-regular fa-heart icons text-slate-600 hover:text-gray-500 transition"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-100 bg-blur p-5 rounded-md mt-5 text-justify">
+        <h1 class="text-xl font-extrabold underline underline-offset-8 mb-4">
+          Long Description
+        </h1>
+        <p
+          class="h-[95px] semore ease-in-out duration-500 overflow-hidden sm:h-auto sm:overflow-visible"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          voluptatum enim dignissimos culpa, facilis aut eveniet veniam atque
+          officiis placeat in dicta inventore excepturi ipsam eaque, minima
+          itaque similique quis sed maxime ad? Eius saepe excepturi facilis ab
+          explicabo cum eveniet est minus dolores!Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Iure voluptatum enim dignissimos culpa,
+          facilis aut eveniet veniam atque officiis placeat in dicta inventore
+          excepturi ipsam eaque, minima itaque similique quis sed maxime ad?
+          Eius saepe excepturi facilis ab explicabo cum eveniet est minus
+          dolores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+          voluptatum enim dignissimos culpa, facilis aut eveniet veniam atque
+          officiis placeat in dicta inventore excepturi ipsam eaque, minima
+          itaque similique quis sed maxime ad? Eius saepe excepturi facilis ab
+          explicabo cum eveniet est minus dolores!Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Iure voluptatum enim dignissimos culpa,
+          facilis aut eveniet veniam atque officiis placeat in dicta inventore
+          excepturi ipsam eaque, minima itaque similique quis sed maxime ad?
+          Eius saepe excepturi facilis ab explicabo cum eveniet est minus
+          dolores!
+        </p>
+        <button
+          onclick="toggleSeeMore()"
+          class="block sm:hidden text-blue-500 focus:outline-none"
+        >
+          See More
+        </button>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 items-start gap-4 md:gap-6 mt-10 flex-row-reverse"
+      >
+        <div class="grid order-2">
+          <p class="text-small font-medium">
+            BE THE FIRST TO REVIEW “KC_TORE28”
+          </p>
+          <p class="text-small mt-2">
+            Your email address will not be published. Required fields are marked
+            <span class="text-red-600">*</span>
+          </p>
+          <div class="mt-6">
+            <div class="flex items-center gap-2">
+              <p class="text-[13px]">
+                Rate this product: <span class="text-red-600">*</span>
+              </p>
+              <p class="flex">
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+              </p>
+            </div>
+            <label for="review" class="label"
+              >Share your review <span class="text-red-600">*</span>
+            </label>
+            <br />
+            <textarea
+              name="review"
+              id=""
+              class="w-full h-[120px] border border-gray-300 focus:outline-none focus:border-blue-dark p-2 text-[12px] rounded-md"
+            ></textarea>
+            <button class="btn-outline mt-3">Submit Review</button>
+          </div>
+        </div>
+        <div class="grid items-start sm:order-2">
+          <div class="flex justify-between items-center">
+            <p class="text-small font-medium uppercase">reviews</p>
+          </div>
+          <div class="flex flex-col items-start gap-3 md:gap-4 mt-3 sm:mt-4">
+            <div
+              class="bg-white flex flex-col p-2 rounded-[4px] border border-gray-200 border-opacity-80"
+            >
+              <b class="text-small">John Deo</b>
+              <p class="flex">
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+                <i class="fa-solid fa-star text-[13px] text-orange-500"></i>
+              </p>
+              <p class="text-[12px] mt-[3px] bg-white inline-block">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                voluptate magnam architecto in odit blanditiis aperiam illo,
+                nulla voluptatibus. Alias!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main ends here -->
+    <footer class="mt-16 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-6">
+        <div class="flex flex-col">
+          <img
+            src="images/Krisna-Chura-Logo.png"
+            alt=""
+            class="w-[70px] mb-3"
+          />
+          <p class="text-small text-blue-dark bg-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            asperiores veritatis maxime dolore illo minima alias vero ipsa,
+            dolorem ut?
+          </p>
+          <div class="mt-5">
+            <h3 class="text-[15px] bg-white">Follow Us On</h3>
+            <div class="flex gap-2 mt-2">
+              <div
+                class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer"
+              >
+                <a href="">
+                  <i class="fa-brands fa-facebook-f text-blue"></i>
+                </a>
+              </div>
+              <div
+                class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer"
+              >
+                <a href="">
+                  <i class="fa-brands fa-youtube text-red-600"></i>
+                </a>
+              </div>
+              <div
+                class="w-[32px] h-[32px] border flex-center rounded-full hover:bg-slate-200 hover:cursor-pointer"
+              >
+                <a href="">
+                  <i class="fa-brands fa-whatsapp text-green-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 col-span-2 flex-row gap-4 md:gap-6">
+          <div class="flex flex-col col-span-1">
+            <h3 class="text-[15px] bg-white">More Information</h3>
+            <hr class="h-[2px] bg-blue-dark" />
+            <div class="flex flex-col gap-2 mt-3">
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >About us</a
+              >
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >Krisna Chura Shop</a
+              >
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >Latest Blogs</a
+              >
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >Contact us</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col col-span-1">
+            <h3 class="text-[15px] bg-white">Customer Area</h3>
+            <hr class="h-[2px] bg-blue-dark" />
+            <div class="flex flex-col gap-2 mt-3">
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >My account</a
+              >
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >Orders</a
+              >
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >Wishlist</a
+              >
+              <a
+                href=""
+                class="text-[14px] text-blue-dark hover:text-gray-700 bg-white"
+                >Track Your Order</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div>
+            <h3 class="text-[15px] bg-white">Get In Touch</h3>
+            <hr class="bg-blue-dark h-[2px]" />
+            <div class="flex items-center gap-3 mt-3">
+              <i class="fa-solid fa-square-phone text-2xl text-gray-700"></i>
+              <div class="flex flex-col">
+                <p class="text-small bg-white">
+                  Customer Support / Marketing Agent:
+                </p>
+                <span class="text-small font-medium bg-white"
+                  >+880 1798-833-942</span
+                >
+              </div>
+            </div>
+            <div class="flex items-center gap-3 mt-3">
+              <i class="fa-solid fa-envelope text-2xl text-gray-700"></i>
+              <div class="flex flex-col">
+                <p class="text-small bg-white">Official Email:</p>
+                <span class="text-small font-medium"
+                  >anybringrofficial@mail.com</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-[15px] bg-white">For Your Complain</h3>
+            <hr class="bg-blue-dark h-[2px]" />
+            <div class="flex items-center gap-3 mt-3">
+              <i class="fa-solid fa-envelopes-bulk text-2xl text-gray-700"></i>
+              <div class="flex flex-col">
+                <p class="text-small bg-white">Office Time:</p>
+                <span class="text-small font-medium bg-white">10AM - 6PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-blue-dark my-5 md:mt-8 md: mb-6" />
+      <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white"
+          >PRIVACY POLICY</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white"
+          >TERMS & CONDITIONS</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white"
+          >REFUND & RETURNS POLICY</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white"
+          >DELIVERY POLICY</a
+        >
+        <a
+          href=""
+          class="text-[12px] sm:text-[13px] font-medium text-slate-700 hover:text-slate-600 bg-white"
+          >FAQS</a
+        >
+      </div>
+    </footer>
+    <div class="mx-auto mt-5 md:mt-7 bg-blue-dark">
+      <div
+        class="max-w-[1400px] mx-auto px-6 py-2 md:py-3 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-[14px] text-white text-center">
+          &copy; 2023 copyright by Anybringr | Designed & Developed by
+          <a href="" class="text-[13px] text-w-lws">DevUganda</a>
+        </p>
+        <img src="images/pay.png" alt="" class="h-6 md:h-7" />
+      </div>
+    </div>
+    <script>
+      function openModal(imageSrc) {
+        document.getElementById("modalImage").src = imageSrc.src;
+        document.getElementById("fullscreenModal").classList.remove("hidden");
+      }
+      document
+        .getElementById("hideModalImage")
+        .addEventListener("click", function () {
+          document.getElementById("fullscreenModal").classList.add("hidden");
+        });
+      const images = document.querySelectorAll(
+        "#productAllImages #SiblingImages"
+      );
+      const mainImage = document.getElementById("mainImage");
+      images.forEach((img) => {
+        img.addEventListener("click", function () {
+          // Remove 'border' class from all images
+          images.forEach((otherImg) => {
+            otherImg.parentNode.classList.remove("!border-blue-dark");
+          });
+          img.parentNode.classList.add("!border-blue-dark");
+          // Set the source of the main image
+          var imgPath = img.src;
+          mainImage.src = imgPath;
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      function toggleSeeMore() {
+        var content = document.querySelector(".semore");
+        if (content) {
+          setTimeout(function () {
+            content.classList.add("h-auto");
+            content.classList.remove("h-[95px]");
+          }, 10);
+        }
+      }
+      const catContainer = document.getElementById("cat");
+      const cahidCatContainer = document.getElementById("cahidCat");
+      catContainer.addEventListener("mouseover", () => {
+        // Show cahidCat children
+        cahidCatContainer.querySelectorAll(".cahidCat").forEach((child) => {
+          child.classList.remove("hidden");
+        });
+      });
+      catContainer.addEventListener("mouseout", () => {
+        // Hide cahidCat children
+        cahidCatContainer.querySelectorAll(".cahidCat").forEach((child) => {
+          child.classList.add("hidden");
+        });
+      });
+
+      function dropdown() {
+        document.querySelector("#submenu").classList.toggle("hidden");
+        document.querySelector("#arrow").classList.toggle("rotate-0");
+      }
+      dropdown();
+
+      function openSidebar() {
+        document.querySelector(".sidebar").classList.toggle("hidden");
+      }
+    </script>
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.store("accordion", {
+          tab: 0,
+        });
+        Alpine.data("accordion", (idx) => ({
+          init() {
+            this.idx = idx;
+          },
+          idx: -1,
+          handleClick() {
+            this.$store.accordion.tab =
+              this.$store.accordion.tab === this.idx ? 0 : this.idx;
+          },
+          handleRotate() {
+            return this.$store.accordion.tab === this.idx ? "rotate-180" : "";
+          },
+          handleToggle() {
+            return this.$store.accordion.tab === this.idx
+              ? `max-height: ${this.$refs.tab.scrollHeight}px`
+              : "";
+          },
+        }));
+      });
+    </script>
+  </body>
+</html>
