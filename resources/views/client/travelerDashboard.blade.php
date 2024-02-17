@@ -67,7 +67,7 @@
                                             @if ($product->status == 'confirmed')
                                                 <p>Can't Delete.</p>
                                             @else
-                                            <button onclick="addProductTraveler({{ $product->id }})"
+                                            <button onclick="deleteTravelerProduct({{ $product->id }})"
                                                 class="hover:text-gray-600 px-2 md:px-3 py-[2px]">
                                                 <i class="fa-solid fa-trash-can"></i>
                                             </button>
@@ -145,6 +145,35 @@
 
                 }
             });
+        }
+
+        function deleteTravelerProduct(productId) {
+            if (confirm("Are you sure you want to delete this traveler product?")) {
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('traveler.product.delete') }}',
+                data: {
+                    id: productId,
+                    _token: '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    // Handle success response
+                    if (response.success) {
+                        alert(response.message); // Show success message
+                        // Optionally, you can remove the deleted product from the DOM
+                        // $(this).closest('tr').remove(); // Remove the row from the table
+                        location.reload(); // Reload the page to reflect changes
+                    } else {
+                        alert('Failed to delete traveler product.'); // Show error message
+                    }
+                },
+                error: function(xhr, status, error) {
+                    // Handle error
+                    console.error(xhr.responseText); // Log error message
+                    alert('An error occurred while processing your request.'); // Show generic error message
+                }
+            });
+        }
         }
     </script>
 @endsection
