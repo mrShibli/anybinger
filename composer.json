@@ -19,7 +19,8 @@
         "laravel/socialite": "^5.11",
         "laravel/tinker": "^2.8",
         "masbug/flysystem-google-drive-ext": "*",
-        "spatie/laravel-backup": "^8.4"
+        "spatie/laravel-backup": "^8.4",
+        "spatie/laravel-sitemap": "^7.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",

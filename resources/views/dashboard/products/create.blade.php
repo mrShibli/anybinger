@@ -113,6 +113,7 @@
                                 <div class="col-sm-12 ">
                                     <div class="card-header d-flex justify-content-between align mb-1">
                                         <h4>Product Images</h4>
+                                        <b>Images size 240*240</b>
                                         <a href="https://cloudconvert.com/" target="_blank">Compress image to webp format</a>
                                     </div>
                                     <div class="card-body mt-2">

@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h4>Sliders</h4>
+                    <h4>Sliders</h4><b>1365 × 519 px Image Size</b>
                     @if (Session::has('error'))
                         <h5 class="text-danger font-md">{{ Session::get('error') }}</h5>
                     @endif

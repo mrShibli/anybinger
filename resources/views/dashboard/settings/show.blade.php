@@ -84,7 +84,6 @@
 
                             <div class="row">
                               <h2 class="col-12 mt-2" style="font-size: 16px">Homepage banner</h2>
-
                               <div class="form-group col-12">
                                 <label>Banner title</label>
                                 <input type="text" name="banner_title" class="form-control" value="{{ $siteSetting->banner_title }}">
@@ -104,6 +103,7 @@
                               <img src="/uploads/settings/{{ $siteSetting->banner_image }}" alt="" style="width: 100%; height: 220px">
                               <div class="form-group col-12">
                                 <label>Banner image</label>
+                                <b>Image Size 1200 × 450 px</b>
                                 <input type="file" name="banner_image" class="form-control">
                               </div>
                             </div>
@@ -212,6 +212,7 @@
                               </div>
                               <div class="form-group col-md-6 col-12">
                                 <label>Traveler short description</label>
+                                
                                 <input type="text" name="traveler_desc" class="form-control" value="{{ $travelerSetting->traveler_desc }}">
                               </div>
 
@@ -223,7 +224,7 @@
                               @endif
                               </div>
                               <div class="form-group col-12">
-                                <label>Traveler banner image</label>
+                                <label>Traveler banner image  900 × 600 px</label>
                                 <input type="file" name="traveler_banner" class="form-control" value="{{ $travelerSetting->traveler_banner }}">
                               </div>
 
