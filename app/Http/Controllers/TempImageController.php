@@ -13,15 +13,15 @@ class TempImageController extends Controller
     public function storeProductImage(Request $request){
 
         $validator = Validator::make($request->all(), [
-            'image' => 'required|mimes:webp|max:256',
+            'image' => 'required|max:256',
         ]);
 
         if ($validator->passes()) {
             $image = $request->file('image');
 
             if($image){
-                $ext = $image->getClientOriginalExtension();
-                $newName = time() . '.'. $ext;
+                // $ext = $image->getClientOriginalExtension();
+                $filename = time() . '.' . $image->getClientOriginalExtension();
 
                 
 
@@ -29,8 +29,11 @@ class TempImageController extends Controller
                 File::makeDirectory($filePath, 0755, true, true);
 
                 // Save the resized image directly without creating a TempImage entry
-                $img = Image::make($image->getRealPath())->resize(240, 240);
-                $resizedName = time() . '_resized.' . $image->getClientOriginalExtension();
+
+                $img = Image::make($image->getRealPath())->encode('webp',100);
+
+                // $resizedName = time() . '_resized.' . $image->getClientOriginalExtension();
+                $resizedName = time() . '_resized.' . 'webp_' . '.webp';
                 $img->save($filePath . $resizedName);
 
                 $tempImage = new TempImage;

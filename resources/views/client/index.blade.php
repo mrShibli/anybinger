@@ -61,7 +61,7 @@
 
     <!-- sliders -->
     <div class="marginA w-[96%] sm:w-[94%] md:max-w-[1400px] bg-white  mx-auto">
-        <div class="swiper rounded-md !w-full !h-full  shadow-2xl drop-shadow-2xl !bg-transparent">
+        <div class="swiper rounded-md !w-full !h-full  !bg-transparent">
 
             <div class="swiper-wrapper !w-full !h-full">
                 @if ($sliders->isNotEmpty())
@@ -90,7 +90,7 @@
     </div>
 
     @if ($homeCard->status == 'published')
-        <section class="hidden lg:block ">
+        <section class=" ">
             <div class="flex flex-wrap justify-around mt-16 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8">
                 @if ($homeCard->title1 != '')
                     <div class="flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
@@ -105,13 +105,13 @@
                     </div>
                 @endif
                 @if ($homeCard->title3 != '')
-                    <div class="flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
+                    <div class="hidden lg:block flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
                         <p class="font-bold text-[19px] cursor-pointer">{{ $homeCard->title3 }}</p>
                         <p>{{ $homeCard->desc3 }}</p>
                     </div>
                 @endif
                 @if ($homeCard->title4 != '')
-                    <div class="flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
+                    <div class="hidden lg:block flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
                         <p class="font-bold text-[19px] cursor-pointer">{{ $homeCard->title4 }}</p>
                         <p>{{ $homeCard->desc4 }}</p>
                     </div>
@@ -223,7 +223,7 @@
             <div class="w-full md:w-[50%] flex flex-wrap mt-4 gap-y-2 " style="align-items: stretch;">
                 @foreach ($latestProduct as $product)
                     <div
-                        class="product bg-white   mx-auto border !rounded-none p-[1px] !shadow-none lg:h-[360px] justify-between max-w-[48%] overflow-hidden">
+                        class="HomeSpecialProduct product bg-white   mx-auto border !rounded-none p-[1px] !shadow-none lg:h-[360px] justify-between overflow-hidden">
                         <div class="flex justify-center items-center w-full relative group cursor-pointer overflow-clip">
                             @php
                                 $productImages = $product

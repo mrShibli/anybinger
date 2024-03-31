@@ -76,6 +76,13 @@
     font-weight: 500;
 } */
 
+
+.HomeSpecialProduct{
+    width: 48% !important;
+}
+.HomeSpecialProduct img{
+    width: 220px !important;
+}
 @media screen and (max-width: 450px) {
     #ShowOnMobilee {
         width: 70% !important;
@@ -220,3 +227,5 @@
         margin-bottom: 16px ;
     }
 }
+
+
