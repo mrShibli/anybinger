@@ -29,7 +29,7 @@
                         <div class="w-full flex flex-col md:flex-row items-center gap-4 justify-center">
                             @foreach ($chunk as $request)
                                 <div id="RproductW"
-                                    class="bg-white mt-3  md:w-full md:w-auto border mx-auto flex  justify-between items-center p-1 smH120">
+                                    class="bg-white mt-3  md:w-auto border mx-auto flex  justify-between items-center p-1 smH120">
                                     <div class="flex flex-row w-full items-center gap-3 overflow-hidden">
                                         @if ($request->image)
                                             <img src="{{ asset('uploads/products/' . $request->image) }}" alt

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\ProductRequest;
 use App\Models\TravelerProduct;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -101,8 +102,12 @@ class ProductController extends Controller
         $validator = Validator::make($request->all(), [
             'url' => 'required|active_url|max:800',
             'notes' => 'required|max:255',
-            'qty' => 'numeric'
+            'qty' => 'numeric',
+            'number' => 'digits:11'
         ]);
+        $user = auth()->user(); // Retrieve the authenticated user
+        $user->phone = $request->input('number'); // Update the phone number with the value from the request
+        $user->save(); // Save the changes to the database
 
         if($validator->passes()){
             $validatedData = $validator->validated();

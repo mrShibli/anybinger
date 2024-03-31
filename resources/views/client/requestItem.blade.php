@@ -39,6 +39,11 @@
                                 placeholder="Describe something about product. example: size,color or anything"></textarea>
                         </div>
 
+                        <div class="w-full flex flex-col gap-1">
+                            <label for="name" class="text-[15px] text-gray-800">Your Phone Number</label>
+                            <input class="border-2 border-[#9aa4ae]" type="text" required name="number" id="">
+                        </div>
+
                         <div class="w-full flex justify-between items-center">
                             <span class="text-[15px] font-medium text-gray-600">Quantity</span>
 

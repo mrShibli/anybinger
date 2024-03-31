@@ -124,7 +124,7 @@
                         onclick="openModal(this)" />
                 </div>
             </div>
-            <div class="grid col-span-1 flex-col justify-center xs:justify-start">
+            <div class="grid bg-white rounded col-span-1 flex-col justify-center xs:justify-start">
                 <div class="mb-4 px-3 sm:px-0">
                     <div class="flex flex-col gap-2">
                         <h1
@@ -198,27 +198,6 @@
 
 
                     </div>
-                    {{-- <div class="bg-white flex items-center gap-3 my-3 md:mt-1 lg:mt-5 xs:justify-start">
-                        <span class="text-sm">Size:</span>
-                        <div
-                            class="flex items-center justify-center w-[33px] h-[33px] rounded-full border hover:bg-blue-dark hover:border-blue-dark group cursor-pointer transition">
-                            <p class="text-small cursor-pointer group-hover:text-white">
-                                30
-                            </p>
-                        </div>
-                        <div
-                            class="flex items-center justify-center w-[33px] h-[33px] rounded-full border hover:bg-blue-dark hover:border-blue-dark group cursor-pointer">
-                            <p class="text-small cursor-pointer group-hover:text-white">
-                                32
-                            </p>
-                        </div>
-                        <div
-                            class="flex items-center justify-center w-[33px] h-[33px] rounded-full border hover:bg-blue-dark hover:border-blue-dark group cursor-pointer">
-                            <p class="text-small cursor-pointer group-hover:text-white">
-                                34
-                            </p>
-                        </div>
-                    </div> --}}
                     <div
                         class="relative flex sm:flex-row flex-col items-center justify-center xs:justify-start gap-2 mt-4 lg:mt-4 sm:mt-6">
                         <div
@@ -231,16 +210,18 @@
                                 <i class="fa-solid fa-plus text-[12px]"></i>
                             </button>
                         </div>
-                        <button onclick="addToCart({{ $product->id }})"
-                            class="btn-cart !hidden sm:!block w-[40%] sm:w-auto lg:text-[14px] md:text-[12px] !rounded-sm">
-                            Add To Cart
-                        </button>
-                        <button onclick="addToWishlist({{ $product->id }})"
-                            class="btn-cart !hidden sm:!block w-[40%] sm:w-auto lg:text-[14px] md:text-[12px] !rounded-sm">
-                            <i class="fa-regular text-[13px] mr-1 fa-heart"></i> Wishlist
-                        </button>
+                        <div class="flex w-[100%] mx-auto justify-between sm:justify-center">
+                            <button onclick="addToCart({{ $product->id }})"
+                                class="btn-cart  w-[40%] sm:w-auto lg:text-[14px] md:text-[12px] !rounded-sm">
+                                Add To Cart
+                            </button>
+                            <button onclick="addToWishlist({{ $product->id }})"
+                                class="btn-cart  w-[40%] sm:w-auto lg:text-[14px] md:text-[12px] !rounded-sm">
+                                <i class="fa-regular text-[13px] mr-1 fa-heart"></i> Wishlist
+                            </button>
+                        </div>
                         <div
-                            class="sm:!hidden sm:w-[30%] justify-between items-center px-4 mx-auto bg-white gap-2 visible border mt-2 rounded-[20px] flex">
+                            class="!hidden sm:w-[30%] justify-between items-center px-4 mx-auto bg-white gap-2 visible border mt-2 rounded-[20px]">
                             <button onclick="addToCart({{ $product->id }})">
                                 <i
                                     class="!text-[22px] sm:!text-[30px] py-2 text-center fa-solid fa-cart-shopping icons text-slate-600 hover:text-gray-500 transition"></i>

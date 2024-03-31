@@ -42,10 +42,10 @@ class GenerateSitemap extends Command
         $sitemap->add('/login');
 
         // Dynamic pages
-        $users = User::all();
-        foreach ($users as $user) {
-            $sitemap->add("/users/{$user->id}");
-        }
+        // $users = User::all();
+        // foreach ($users as $user) {
+        //     $sitemap->add("/users/{$user->id}");
+        // }
         
         $product = Product::all();
         
