@@ -228,7 +228,7 @@ $bannerImage = $banner ? asset('uploads/settings/' . $banner) : asset('client/im
                 </div>
                 @endif
                 <a href="{{ route('product', $product->slug) }}">
-                    <img src="{{ $imageName ? asset('uploads/products/' . $imageName) : asset('client/images/650.png') }}" alt="{{ $title }}" class="w-full h-full rounded-lg mx-auto" /></a>
+                    <img src="{{ $imageName ? asset('uploads/products/' . $imageName) : asset('client/images/650.png') }}" alt="{{ $title }}" class="w-full h-full mx-auto" /></a>
 
 
 
@@ -291,7 +291,7 @@ $bannerImage = $banner ? asset('uploads/settings/' . $banner) : asset('client/im
                 @endif
 
 
-                <a href="{{ route('product', $product->slug) }}"><img style=" height:240px" src="{{ $imageName ? asset('uploads/products/' . $imageName) : asset('client/images/650.png') }}" alt="{{ $product->title }}" class="w-full h-full rounded-lg mx-auto" /></a>
+                <a href="{{ route('product', $product->slug) }}"><img style=" height:240px" src="{{ $imageName ? asset('uploads/products/' . $imageName) : asset('client/images/650.png') }}" alt="{{ $product->title }}" class="w-full h-full mx-auto" /></a>
 
                 <div class="px-[8px] bg-white sm:hidden absolute bottom-1 border rounded-[20px] group-hover:flex transition ease-in duration-150">
                     <i class=""></i>
