@@ -82,7 +82,8 @@
     width: 48% !important;
 }
 .HomeSpecialProduct img{
-    width: 220px !important;
+    width: 240px !important;
+    height: 240px;
 }
 @media screen and (max-width: 450px) {
     #ShowOnMobilee {
