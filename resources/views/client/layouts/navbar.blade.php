@@ -50,6 +50,7 @@
                 </form>
             </div>
             <div class="icons flex gap-2">
+                <a href="{{ route('requestProduct') }}" class="px-2 py-1 bg-blue-dark rounded text-white hidden md:block mr-2"><i class="fa-solid fa-bag-shopping"></i> Request</a>
                 @auth
 
                     <div class="px-[5px] py-[4px] mr-1 mt-[1px] hidden md:block relative bg-white">
@@ -105,7 +106,7 @@
                 @endauth
 
                 <div class="px-[8px] py-[4px] hidden md:block bg-white relative">
-
+                    
                     @auth
                         <a onclick="showMenus()" href="{{ !Auth::check() ? route('login') : 'javascript:void(0)' }}"
                             class="" title="Account">
@@ -241,6 +242,10 @@
         <i class="fa-solid fa-store"></i>
         <a href="{{ route('products') }}" class="text-[14px] ml-4 text-gray-200 font-medium">Shop</a>
     </div>
+    <div class="p-2 mt-1 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <i class="fa-solid fa-registered"></i>
+        <a href="{{ route('requestProduct') }}" class="text-[14px] ml-4 text-gray-200 font-medium">Product Request</a>
+    </div>
     @auth
         <div class="p-2 mt-1 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
             <i class="fa-regular fa-heart"></i>
@@ -261,7 +266,7 @@
 
         <div class="p-2 mt-1 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
             <i class="fa-solid fa-wallet "></i>
-            <a href="{{ route('account.requests') }}" class="text-[14px] ml-4 text-gray-200 font-medium">My wallet</a>
+            <a href="{{ route('account.index') }}" class="text-[14px] ml-4 text-gray-200 font-medium">My wallet</a>
         </div>
 
 
