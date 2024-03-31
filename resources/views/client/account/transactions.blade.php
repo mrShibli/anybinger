@@ -71,7 +71,7 @@
                             @if ($payments->isNotEmpty())
                                 @foreach ($payments as $payment)
                                     <tr class="bg-white border-b ">
-                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "> {{ $payment->order->invoice_id }} </th>
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "> {{ $payment->order->invoice_id ?? '' }} </th>
                                         <td class="px-6 py-4"> {{ $payment->trxID ? $payment->trxID : 'Pending' }} </td>
                                         <td class="px-6 py-4"> {{ $payment->payment_number ? $payment->payment_number : 'Pending' }} </td>
                                         <td class="px-6 py-4"> {{ $payment->pay_amount }} </td>

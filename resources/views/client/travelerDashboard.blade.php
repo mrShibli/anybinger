@@ -64,7 +64,7 @@
                                             </a>
                                         </td>
                                         <td class="p-3">
-                                            @if ($product->status == 'confirmed')
+                                              @if ($product->status == 'confirmed')
                                                 <p>Can't Delete.</p>
                                             @else
                                             <button onclick="deleteTravelerProduct({{ $product->id }})"
@@ -146,8 +146,8 @@
                 }
             });
         }
-
-        function deleteTravelerProduct(productId) {
+        
+         function deleteTravelerProduct(productId) {
             if (confirm("Are you sure you want to delete this traveler product?")) {
             $.ajax({
                 type: 'POST',

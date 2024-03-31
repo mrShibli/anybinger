@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Disallow: /secured/
+Sitemap: https://anybringr.com/sitemap.xml

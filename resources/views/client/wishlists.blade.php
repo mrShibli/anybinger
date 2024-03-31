@@ -63,7 +63,7 @@
                 @endif
 
 
-                @if ($wishlist->hasPages)
+                @if ($wishlist->hasPages ?? '')
                     <div class="custom-pagination " style="margin-top: 24px">
                         <ul class="pagination">
                             @if ($wishlists->onFirstPage())
