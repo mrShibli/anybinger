@@ -46,18 +46,40 @@ class ProductController extends Controller
         return view('dashboard.products.special', compact(['product']));
     }   
 
-    public function makeSpecial($id){
+    public function makeSpecial($id)
+    {
+        $product = Product::find($id);
+
+        if (!$product) {
+            session()->flash('error', 'Product not found');
+            return redirect()->route('products.index');
+        }
+
+        $specialProduct = SpecialProduct::first();
+
+        if (!$specialProduct) {
+            // Create a new special product if none exists
+            $specialProduct = new SpecialProduct();
+        }
+
+        $specialProduct->product_id = $product->id;
+        $specialProduct->save();
+
+        session()->flash('success', 'Product added to special list');
+        return redirect()->route('products.index');
+    }
+
+    public function deleteSpecial($id){
         $product = Product::find($id);
 
         if(!$product){
             session()->flash('error', 'Product not found');
             return redirect()->route('products.index');
         }
-        $specialProduct = SpecialProduct::first();
-        $specialProduct->product_id = $id;
-        $specialProduct->save();
-
-        session()->flash('success', 'Product added to special list'); 
+        $specialProduct = SpecialProduct::where('product_id',$id);
+        
+        $specialProduct->delete();
+        session()->flash('success', 'Product delete form special list'); 
         return redirect()->route('products.specialProduct');
     }
 

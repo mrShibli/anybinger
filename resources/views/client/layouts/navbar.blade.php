@@ -140,7 +140,7 @@
                                     <span>My transaction</span>
                                 </a>
 
-                                <a href="" class="hover:text-gray-700 text-[14px] flex items-center">
+                                <a href="{{ route('account.index') }}" class="hover:text-gray-700 text-[14px] flex items-center">
                                     <i class="fa-solid fa-wallet text-[15px] text-slate-800"
                                         style="margin-right: 6px; margin-top: 1px"></i>
                                     <span>My wallet</span>

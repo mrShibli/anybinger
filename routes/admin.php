@@ -80,6 +80,8 @@ Route::group(['prefix' => 'secured/dashboard', 'middleware' => 'admin.auth'], fu
     Route::delete('product/delete/request/{id}', [ProductController::class, 'deleteRequest'])->name('products.deleteRequest');
     Route::get('product/special/', [ProductController::class, 'specialProduct'])->name('products.specialProduct');
     Route::get('product/make-special/{id}', [ProductController::class, 'makeSpecial'])->name('products.makeSpecial');
+    Route::get('product/delete-special/{id}', [ProductController::class, 'deleteSpecial'])->name('products.deleteSpecial');Route::delete('product/delete-special/{id}', [ProductController::class, 'deleteSpecial'])->name('products.deleteSpecial');
+
 
     // sliders routes
     Route::resource('sliders', SliderController::class);

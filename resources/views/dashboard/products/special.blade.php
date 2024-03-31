@@ -93,11 +93,11 @@
                 confirmButtonText: 'Confirm Delete',
                 preConfirm: () => {   
                 
-                    var route = "{{ route('products.destroy', 'ID') }}";
-                    const url = route.replace('ID', id);
+                    const url = "{{ route('products.deleteSpecial', ['id' => 'ID']) }}".replace('ID', id);
+
                     $.ajax({
                         url: url,
-                        type: 'delete',
+                        type: 'get',
                         data: $(this).serializeArray(),
                         success: function(response){
                             if(response.status == true){
