@@ -13,7 +13,7 @@ class TempImageController extends Controller
     public function storeProductImage(Request $request){
 
         $validator = Validator::make($request->all(), [
-            'image' => 'required|max:256',
+            'image' => 'required',
         ]);
 
         if ($validator->passes()) {

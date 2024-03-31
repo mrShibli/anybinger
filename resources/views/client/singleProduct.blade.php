@@ -120,7 +120,7 @@
                 </div>
                 <div class="border-gray-300 flex justify-center items-center p-2 h-full w-full lg:h-full md:h-[350px]">
                     <img src="{{ $productFirst ? asset('uploads/products/' . $productFirst->name) : asset('/client/images/650.png') }}"
-                        alt="" class="rounded-lg hover:cursor-pointer w-full h-full" id="mainImage"
+                        alt="{{ $product->title }}" class="rounded-lg hover:cursor-pointer w-full h-full" id="mainImage"
                         onclick="openModal(this)" />
                 </div>
             </div>

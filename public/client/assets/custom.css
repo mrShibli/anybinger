@@ -44,11 +44,12 @@
 }
 
 .bannerBtn {
-    padding: 7px 13px;
+    padding: 16px 37px;
     border: 1px solid transparent;
     border-radius: 5px;
-    background: linear-gradient(140deg, rgb(0, 238, 255), rgb(0, 177, 0));
-    color: rgb(0, 0, 0);
+    background: black;
+    color: #ffff;
+    border-radius: 0px;
 }
 
 .bggray {

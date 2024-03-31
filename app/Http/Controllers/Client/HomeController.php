@@ -33,6 +33,14 @@ class HomeController extends Controller
                             ->whereDoesntHave('specialProduct') // Assuming 'specialProduct' is the relationship method in your Product model
                             ->limit(4)
                             ->get();
+
+        $products = Product::with('productImage')
+                    ->where('status', 'published')
+                    ->whereDoesntHave('specialProduct')
+                    ->inRandomOrder() // Randomize the order
+                    ->limit(10)       // Limit to 10 products
+                    ->get();
+                                    
         $data['latestProduct'] = $latestProducts;
         $data['specialProduct'] = $specialProduct;
         $data['homeCard'] = $homeCard;
@@ -40,6 +48,7 @@ class HomeController extends Controller
         $data['siteSetting'] = $siteSetting;
         $data['feedback'] = $feedback;
         $data['sliders'] = $sliders;
+        $data['products'] = $products;
         return view('client.index', $data);
     }
 
