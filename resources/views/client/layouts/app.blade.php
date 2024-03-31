@@ -170,7 +170,7 @@
             class="max-w-[1400px] mx-auto px-6 py-2 lg:py-3 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-[14px] text-white text-center">&copy; 2023-24 Copyright by Anybringr | Designed & Developed
                 by
-                <a href="" class="text-[13px] text-w-lws">DevArtisan</a>
+                <a href="https://crftbyte.com/" class="text-[13px] text-w-lws">Crftbyte</a>
             </p>
             <img src="/client/images/bkash.png" alt="" class="bg-white h-6 md:h-7 "
                 style="padding-left: 10px" />

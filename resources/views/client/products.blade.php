@@ -74,7 +74,7 @@
                 @endif
 
 
-                <a href="{{ route('product', $product->slug) }}"><img alt="{{ $product->title }}" src="{{ $imageName ? asset('uploads/products/' . $imageName) : asset('client/images/650.png') }}" class="w-full h-full rounded-lg mx-auto" /></a>
+                <a href="{{ route('product', $product->slug) }}"><img style=" height:240px" alt="{{ $product->title }}" src="{{ $imageName ? asset('uploads/products/' . $imageName) : asset('client/images/650.png') }}" class="w-full h-full rounded-lg mx-auto" /></a>
 
                 <div class="px-[8px] bg-white sm:hidden absolute bottom-1 border rounded-[20px] group-hover:flex transition ease-in duration-150">
                     <i class=""></i>
