@@ -105,13 +105,13 @@
                     </div>
                 @endif
                 @if ($homeCard->title3 != '')
-                    <div class="hidden lg:block flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
+                    <div class="hidden lg:flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
                         <p class="font-bold text-[19px] cursor-pointer">{{ $homeCard->title3 }}</p>
                         <p>{{ $homeCard->desc3 }}</p>
                     </div>
                 @endif
                 @if ($homeCard->title4 != '')
-                    <div class="hidden lg:block flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
+                    <div class="hidden lg:flex flex-col justify-between border rounded-md max-w-[290px] mt-5 p-4 bg-white">
                         <p class="font-bold text-[19px] cursor-pointer">{{ $homeCard->title4 }}</p>
                         <p>{{ $homeCard->desc4 }}</p>
                     </div>
@@ -128,7 +128,7 @@
         class="flex  items-center gap-4 sm:gap-6 flex-col md:flex-row relative h-auto mt-16 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-8">
         @if ($specialProduct)
             <div class="w-full md:w-[50%] mt-4" style="align-item: center; align-self: stretch;">
-                <div class="product   bg-w-lws !border-t-0" style="height: 100%">
+                <div class="product p-10  bg-w-lws !border-t-0" style="height: 100%">
                     @php
                         $productImages = $specialProduct->product
                             ->productImage()
@@ -223,7 +223,7 @@
             <div class="w-full md:w-[50%] flex flex-wrap mt-4 gap-y-2 " style="align-items: stretch;">
                 @foreach ($latestProduct as $product)
                     <div
-                        class="HomeSpecialProduct product bg-white   mx-auto border !rounded-none p-[1px] !shadow-none lg:h-[360px] justify-between overflow-hidden">
+                        class="HomeSpecialProduct p-[1px] product bg-white   mx-auto border !rounded-none !shadow-none lg:h-[360px] justify-between overflow-hidden">
                         <div class="flex justify-center items-center w-full relative group cursor-pointer overflow-clip">
                             @php
                                 $productImages = $product
@@ -339,7 +339,7 @@
         </div>
         <h1 class="text-[#fff] z-10 text-center text-[30px] font-extrabold mt-10 md:mt-40">
             {{ $anyBringrSettings->banner_title }}</h1>
-        <h2 class="text-[#fff] z-10 text-sm text-center mt-5 px-3 md:text-xl font-bold mt-1 " style="max-width: 800px">
+        <h2 class="text-[#fff] z-10 text-sm text-center mt-5 px-3 md:text-xl font-bold " style="max-width: 800px">
             {{ $anyBringrSettings->banner_paragraph }}</h2>
         <a href="{{ $anyBringrSettings->banner_link }}" class="z-10">
             <button

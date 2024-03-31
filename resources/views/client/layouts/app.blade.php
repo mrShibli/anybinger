@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="{{ asset('client/assets/index-2f719f37.css') }}" />
     <link rel="stylesheet" href="{{ asset('client/assets/custom.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
-    
+    @vite('resources/css/app.css')
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRJWNT00EQ"></script>
 <script>
