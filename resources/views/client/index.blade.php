@@ -61,7 +61,7 @@ $bannerImage = $banner ? asset('uploads/settings/' . $banner) : asset('client/im
 @section('contents')
 
 <!-- sliders -->
-<div class="marginA w-[96%] sm:w-[94%] md:max-w-[1400px] bg-white  mx-auto">
+<div class="marginA w-[96%] mg:mt-0 mt-16 sm:w-[94%] md:max-w-[1400px] bg-white  mx-auto">
     <div class="swiper rounded-md !w-full !h-full  !bg-transparent">
 
         <div class="swiper-wrapper !w-full !h-full">

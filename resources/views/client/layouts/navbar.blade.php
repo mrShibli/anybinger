@@ -1,7 +1,7 @@
 <!-- Nav Bar -->
 <nav class="max-w-[1400px] sm:px-6 md:px-8 mx-auto relative">
     <div
-        class="max-w-[80px] border border-t-transparent border-l-transparent border-r-transparent border-opacity-70 border-blue-dark sm:max-w-[150px] logo-sm sm:p-4 p-1 bg-white absolute sm:top-[-20px] md: rounded-full">
+        class="max-w-[80px] border border-t-transparent border-l-transparent border-r-transparent border-opacity-70 border-blue-dark sm:max-w-[150px] logo-sm sm:p-4 p-1 bg-white absolute lg:top-[-20px] md: rounded-full">
         @if (file_exists(public_path('uploads/settings/' . $anyBringrSettings->logo)))
             <a href="{{ route('index') }}"><img class="w-full rounded-full drop-shadow-2xl"
                     src="{{ asset('uploads/settings/' . $anyBringrSettings->logo) }}" alt="" srcset="" /></a>
@@ -24,7 +24,7 @@
             <div>
             </div>
 
-            <div id="ShowOnMobilee" class=" hidden LargeScreenBlock">
+            <div id="" class="mobileandPcSearch absolute  md:left-[25%] top-[60px] lg:static">
                 <form id="pSearchFrom"
                     class="bg-white flex justify-between search w-[450px] border-[1px] rounded-full h-10 relative border-blue-dark border-opacity-70">
                     <input
@@ -49,6 +49,8 @@
                     </button>
                 </form>
             </div>
+
+
             <div class="icons flex gap-2">
                 @auth
 

@@ -33,7 +33,7 @@
       <i class="fa-regular text-white fa-user text-[19px]"></i>
     </a>
   </div>
-  <header>
+  <header style="margin-bottom: 50px">
     <!-- Top Header -->
     <div id="header" class="">
       <div class="bg-blue-dark h-8 w-full mx-auto flex flex-row gap-3 justify-end text-white items-center">
