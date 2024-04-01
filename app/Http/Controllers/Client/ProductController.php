@@ -105,7 +105,8 @@ class ProductController extends Controller
             'qty' => 'numeric',
             'number' => 'digits:11'
         ]);
-        $user = auth()->user(); // Retrieve the authenticated user
+
+        $user = User::find(auth()->user()->id); // Retrieve the authenticated user
         $user->phone = $request->input('number'); // Update the phone number with the value from the request
         $user->save(); // Save the changes to the database
 

@@ -40,6 +40,7 @@ Route::post('/remove-from-cart/', [CartController::class, 'removeFromCart'])->na
 Route::post('/update-cart/', [CartController::class, 'updateCart'])->name('updateCart');
 Route::post('/add-to-wishlists', [AccountController::class, 'addToWishlist'])->name('account.addToWishlist');
 
+
 // static pages
 Route::get('/pages/{slug}', [HomeController::class, 'pages'])->name('pages');
 
@@ -121,9 +122,3 @@ Route::get('/notification', function () {
 Route::get('/traveler/', [TravelerController::class, 'index'])->name('traveler.index');
 
 
-
-Route::get('/send-email', function () {
-    Mail::to('sihabkh00@gmail.com')->send(new ResetPasswordMail('hi', '
-    nasa'));
-    return 'Email sent!';
-});

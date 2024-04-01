@@ -348,8 +348,6 @@ $bannerImage = $banner ? asset('uploads/settings/' . $banner) : asset('client/im
 
 <h1 class=" mx-auto px-3 sm:px-6 md:px-8 text-2xl md:text-3xl font-extrabold text-center mt-14 mb-7" style="padding-top: 20px">Customer feedback at Anybringr</h1>
 <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-3 sm:px-6 md:px-8 ">
-
-
     <div class="w-full md:w-full h-[180px] md:h-[200px] lg:h-[190px] xs:h-[300px] xl:h-[250px] rounded-md mx-auto mb-14 lg:mb-0 ">
         <iframe class="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="YouTube video player" allowfullscreen frameborder="0" src="{{ $feedback->feedback1 }}"></iframe>
         <div class="w-full">

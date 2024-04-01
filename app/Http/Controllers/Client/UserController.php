@@ -85,8 +85,6 @@ class UserController extends Controller
                 return redirect()->route('account.index');
             }
         }
-
-
         
         return redirect()->route('account.index');
     }

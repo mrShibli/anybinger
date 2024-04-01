@@ -18,7 +18,7 @@
                             stores</label>
                         @if (empty($productUrl))
                             <input type="text" name="url" class="input !border-gray-400 focus:!border-slate-600"
-                                placeholder="enter your product url from usa uk-based store">
+                                placeholder="Enter your product url from usa uk-based store">
                         @else
                             <input type="text" name="url" value="{{ $productUrl }}" hidden>
                             <div id="linkPreview">
@@ -41,7 +41,8 @@
 
                         <div class="w-full flex flex-col gap-1">
                             <label for="name" class="text-[15px] text-gray-800">Your Phone Number</label>
-                            <input class="border-2 border-[#9aa4ae]" type="text" required name="number" id="">
+                            <input type="number" name="number" class="input !border-gray-400 focus:!border-slate-600"
+                                placeholder="Enter your phone number">
                         </div>
 
                         <div class="w-full flex justify-between items-center">
